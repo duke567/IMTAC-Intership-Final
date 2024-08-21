@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Admin Dashboard</h2>
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Manage Employees</h5>
+            <p class="card-text">You can view, edit, and delete employee records.</p>
+            <a routerLink="/employees" class="btn btn-primary">Go to Employee List</a>
+            <a routerLink="/register" class="btn btn-success ml-2">Add New Employee</a>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>

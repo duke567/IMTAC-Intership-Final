@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Employee Dashboard</h2>
+    <div *ngIf="employee">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">My Profile</h5>
+          <p class="card-text">Name: {{ employee.first_name }} {{ employee.last_name }}</p>
+          <p class="card-text">Email: {{ employee.email }}</p>
+          <p class="card-text">Position: {{ employee.position }}</p>
+          <a (click)="viewProfile()" class="btn btn-primary">View Profile</a>
+          <a (click)="editProfile()" class="btn btn-warning ml-2">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

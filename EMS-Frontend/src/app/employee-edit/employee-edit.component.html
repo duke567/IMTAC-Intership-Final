@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Employee</title>
+</head>
+<body>
+  <br><br>
+  <div class="container">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <label class="form-label">first_name</label>
+          <input type="text" class="form-control" formControlName="first_name">
+        </div>
+        <div class="col">
+          <label class="form-label">last_name</label>
+          <input type="text" class="form-control" formControlName="last_name">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label class="form-label">email</label>
+          <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="col">
+          <label class="form-label">position</label>
+          <input type="text" class="form-control" formControlName="position">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label class="form-label">department</label>
+          <input type="text" class="form-control" formControlName="department">
+        </div>
+        <div class="col">
+          <label class="form-label">phone_number</label>
+          <input type="text" class="form-control" formControlName="phone_number">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <label class="form-label">date_of_birth</label>
+          <input class="form-control" type="date" formControlName="date_of_birth">
+        </div>
+        <div class="col">
+          <label class="form-label">joining_date</label>
+          <input class="form-control" type="date" formControlName="joining_date">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary" type="submit">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

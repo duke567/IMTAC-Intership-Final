@@ -1,0 +1,145 @@
+<div class="container mt-5">
+  <h2>User Registration</h2>
+  <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+    <!-- Username -->
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="form-control"
+        [(ngModel)]="user.username"
+        required
+      />
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="user.password" name="password" required
+           minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&].{8,}"
+           class="form-control" #passwordInput="ngModel">
+    <div *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">
+      Password must be at least 8 characters long and contain at least one uppercase letter, 
+      one lowercase letter, one number, and one special character.
+    </div>
+    </div>
+
+    <!-- Role -->
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <select id="role" name="role" class="form-control" [(ngModel)]="user.role" required>
+        <option value="admin">Admin</option>
+        <option value="employee">Employee</option>
+      </select>
+    </div>
+
+    <!-- First Name -->
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        class="form-control"
+        [(ngModel)]="user.firstName"
+        required
+      />
+    </div>
+
+    <!-- Last Name -->
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        class="form-control"
+        [(ngModel)]="user.lastName"
+        required
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        [(ngModel)]="user.email"
+        required
+      />
+    </div>
+
+    <!-- Department -->
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input
+        type="text"
+        id="department"
+        name="department"
+        class="form-control"
+        [(ngModel)]="user.department"
+        required
+      />
+    </div>
+
+    <!-- Position -->
+    <div class="form-group">
+      <label for="position">Position:</label>
+      <input
+        type="text"
+        id="position"
+        name="position"
+        class="form-control"
+        [(ngModel)]="user.position"
+        required
+      />
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input
+        type="text"
+        id="phoneNumber"
+        name="phoneNumber"
+        class="form-control"
+        [(ngModel)]="user.phoneNumber"
+        required
+      />
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        name="dateOfBirth"
+        class="form-control"
+        [(ngModel)]="user.dateOfBirth"
+        required
+      />
+    </div>
+
+    <!-- Joining Date -->
+    <div class="form-group">
+      <label for="joiningDate">Joining Date:</label>
+      <input
+        type="date"
+        id="joiningDate"
+        name="joiningDate"
+        class="form-control"
+        [(ngModel)]="user.joiningDate"
+        required
+      />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary mt-3">Register</button>
+  </form>
+</div>

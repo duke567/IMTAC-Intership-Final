@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            margin-bottom: 30px;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 100px 25px;
+        }
+        .features {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .features .card {
+            margin: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Employee Management System</h1>
+        <p class="lead">Manage your organization's employee data with ease.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+    </div>
+
+    <!-- Features -->
+    <div class="container features">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Directory</h5>
+                        <p class="card-text">View and manage all employee details (Admin Only).</p>
+                        <a routerLink="login" class="btn btn-primary">View Directory</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Information</h5>
+                        <p class="card-text">View and update personal Information</p>
+                        <a routerLink="login" class="btn btn-primary">View Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Account</h5>
+                        <p class="card-text">Create new username and passwords</p>
+                        <a routerLink="login" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
